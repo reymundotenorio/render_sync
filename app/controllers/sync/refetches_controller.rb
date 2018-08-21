@@ -1,8 +1,8 @@
 class RenderSync::RefetchesController < ApplicationController
 
-  before_filter :require_valid_request
-  before_filter :find_resource
-  before_filter :find_authorized_partial
+  before_action :require_valid_request
+  before_action :find_resource
+  before_action :find_authorized_partial
 
   def show
     render json: {
