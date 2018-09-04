@@ -10,7 +10,7 @@ module RenderSync
 
     module ClassMethods
       def enable_sync(options = {})
-        around_filter :enable_sync, options
+        around_action :enable_sync, options
       end
     end
 
