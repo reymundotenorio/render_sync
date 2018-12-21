@@ -195,9 +195,9 @@ class RenderSync.View
     # Remove and insert with effect
     $('.card-container').each ->
       if $(this).hasClass('false')
-        $(this).fadeOut
+        $(this).fadeOut 3000
       else if $(this).hasClass('true')
-        $(this).fadeIn
+        $(this).fadeIn 3000
       return
     
   insert: ($el) ->
@@ -208,9 +208,9 @@ class RenderSync.View
     # Remove and insert with effect
     $('.card-container').each ->
       if $(this).hasClass('false')
-        $(this).fadeOut
+        $(this).fadeOut 3000
       else if $(this).hasClass('true')
-        $(this).fadeIn
+        $(this).fadeIn 3000
       return
 
 
