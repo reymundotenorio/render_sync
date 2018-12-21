@@ -192,9 +192,12 @@ class RenderSync.View
     @$el = $new
     @afterUpdate()
     @bind()
+    # Remove and insert with effect
     $('.card-container').each ->
       if $(this).hasClass('false')
-        $(this).css 'background': 'red'
+        $(this).fadeOut
+      else if $(this).hasClass('true')
+        $(this).fadeIn
       return
     
   insert: ($el) ->
@@ -202,6 +205,13 @@ class RenderSync.View
     @$el = $el
     @afterInsert()
     @bind()
+    # Remove and insert with effect
+    $('.card-container').each ->
+      if $(this).hasClass('false')
+        $(this).fadeOut
+      else if $(this).hasClass('true')
+        $(this).fadeIn
+      return
 
 
 class RenderSync.Partial
