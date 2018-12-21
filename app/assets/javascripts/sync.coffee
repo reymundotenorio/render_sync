@@ -193,7 +193,8 @@ class RenderSync.View
     @afterUpdate()
     @bind()
     $('.card-container').each ->
-      $(this).trigger 'classChanged'
+      if $(this).hasClass('false')
+        $(this).css 'background': 'red'
       return
     
   insert: ($el) ->
@@ -201,9 +202,6 @@ class RenderSync.View
     @$el = $el
     @afterInsert()
     @bind()
-    $('.card-container').each ->
-      $(this).trigger 'classChanged'
-      return
 
 
 class RenderSync.Partial
