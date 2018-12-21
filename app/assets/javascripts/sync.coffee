@@ -192,7 +192,8 @@ class RenderSync.View
     @$el = $new
     @afterUpdate()
     @bind()
-    alert 'Update'
+    $('.card-container').trigger 'classChanged'
+    
 
 
   insert: ($el) ->
@@ -200,7 +201,7 @@ class RenderSync.View
     @$el = $el
     @afterInsert()
     @bind()
-    alert 'Insert'
+    $('.card-container').trigger 'classChanged'
 
 
 
