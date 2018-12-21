@@ -192,6 +192,7 @@ class RenderSync.View
     @$el = $new
     @afterUpdate()
     @bind()
+    alert 'Update'
 
 
   insert: ($el) ->
@@ -199,6 +200,7 @@ class RenderSync.View
     @$el = $el
     @afterInsert()
     @bind()
+    alert 'Insert'
 
 
 
